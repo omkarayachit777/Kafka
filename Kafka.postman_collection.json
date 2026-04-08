@@ -1,0 +1,64 @@
+{
+  "info": {
+    "_postman_id": "37338cf7-544a-4a20-9884-1c5c1513e7bd",
+    "name": "Kafka",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "8770459"
+  },
+  "item": [
+    {
+      "name": "add-message",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Testing kafka topic named my-topic\",\r\n    \"publishingDate\": \"08-04-2026 20:47\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/kafka/producer/add-message",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "kafka",
+            "producer",
+            "add-message"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-message",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8082/kafka/consumer/get-message",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "kafka",
+            "consumer",
+            "get-message"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
